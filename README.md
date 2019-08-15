@@ -7,6 +7,14 @@ before using this library.
 
 
 [![Build Status](https://img.shields.io/travis/g4s8/xembly-js.svg?style=flat-square)](https://travis-ci.org/g4s8/xembly-js)
+![npm](https://img.shields.io/npm/v/xembly)
+
+# Installation
+
+Add `npm` module:
+```bash
+npm install --save xembly
+```
 
 # Usage
 
