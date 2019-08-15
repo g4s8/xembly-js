@@ -5,6 +5,9 @@ Make sure you understand what is [Xembly](https://github.com/yegor256/xembly)
 and what does [directives](https://github.com/yegor256/xembly#directives) mean
 before using this library.
 
+
+[![Build Status](https://img.shields.io/travis/g4s8/xembly-js.svg?style=flat-square)](https://travis-ci.org/g4s8/xembly-js)
+
 # Usage
 
 `Xembler` class can apply [directives](https://github.com/yegor256/xembly#directives)
