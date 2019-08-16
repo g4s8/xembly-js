@@ -1,3 +1,9 @@
+/*
+ * @todo #1:30min Continue implementing
+ *  directives. Right now only ADD and SET
+ *  directives are implemented. See full list
+ *  here: https://github.com/yegor256/xembly#directives
+ */
 
 /**
  * ADD tag-name; directive.
