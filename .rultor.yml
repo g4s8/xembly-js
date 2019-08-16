@@ -13,8 +13,9 @@ merge:
 release:
   script: |-
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
-    sed -Ei 's/"version":\s+"[0-9]+\.[0-9]+\.[0-9]+",/"version": "${tag}",/g' package.json
+    sed -Ei "s/\"version\":\s+\"[0-9]+\.[0-9]+\.[0-9]+\",/\"version\": \"${tag}\",/g" package.json
     export PATH=/usr/local/bin:$PATH
+    npm config set color false
     npm run build
     npm run test
     npm run lint
