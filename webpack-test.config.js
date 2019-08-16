@@ -15,7 +15,7 @@ var config = {
  mode: "development",
  plugins: [
    new WebpackShellPlugin({
-     onBuildEnd: "mocha --colors dist/tests.js",
+     onBuildEnd: "ava dist/tests.js",
      verbose: true
    })
  ]

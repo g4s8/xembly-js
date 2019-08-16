@@ -1,8 +1,11 @@
-import {AddDir, SetDir} from './directives.js';
-
+/**
+ * Xembly engine which can apply directives
+ * to DOM.
+ * Use directives package to construct directives.
+ */
 export default class Xembler {
-  constructor(text) {
-    this.dirs = split(text)
+  constructor(dirs) {
+    this.dirs = dirs.asArray();
   }
 
   apply(doc, node=null) {
@@ -20,19 +23,3 @@ export default class Xembler {
   }
 }
 
-function split(dirs) {
-  return dirs.split(";")
-    .filter(x => x.length > 0)
-    .map(x => directive(x));
-}
-
-function directive(str) {
-  const cmd = str.split(' ')
-  if (cmd[0] == 'ADD') {
-    return new AddDir(cmd[1]);
-  }
-  if (cmd[0] == 'SET') {
-    return new SetDir(cmd[1]);
-  }
-  throw `Unsupported directive (yet): '${cmd[0]}'"`;
-}

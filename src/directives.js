@@ -9,6 +9,9 @@
  * ADD tag-name; directive.
  * Creates new child element and appending
  * to current nodes.
+ * @todo #1:30min Validate directive arguments.
+ *  It should be valid XML entity, let's check how
+ *  it was implemented in origin xembly project.
  */
 export class AddDir {
   constructor(tag) {
@@ -26,6 +29,10 @@ export class AddDir {
       out[pos] = el;
     }
     return out;
+  }
+
+  toString() {
+    return `ADD '${this.tag}'`;
   }
 }
 
@@ -45,5 +52,9 @@ export class SetDir {
       cur[pos].appendChild(tn);
     }
     return cur;
+  }
+
+  toString() {
+    return `SET '${this.text}'`;
   }
 }
