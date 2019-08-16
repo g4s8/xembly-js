@@ -9,6 +9,8 @@ before using this library.
 [![Build Status](https://img.shields.io/travis/g4s8/xembly-js.svg?style=flat-square)](https://travis-ci.org/g4s8/xembly-js)
 ![npm](https://img.shields.io/npm/v/xembly)
 
+[![DevOps By Rultor.com](http://www.rultor.com/b/g4s8/xembly-js)](http://www.rultor.com/p/g4s8/xembly-js)
+
 # Installation
 
 Add `npm` module:

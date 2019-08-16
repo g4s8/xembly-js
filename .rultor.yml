@@ -1,0 +1,22 @@
+---
+docker:
+  image: "g4s8/jsrultor:alpine3.10"
+decrypt:
+  .npmrc: "repo/.assets/.npmrc.asc"
+merge:
+  script:
+    - "npm run build"
+    - "npm run test"
+    - "npm run lint"
+    - "pdd --source=$(pwd) --verbose --file=/dev/null"
+  fast-forward: "no"
+release:
+  script: |-
+    [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
+    sed -Ei 's/"version":\s+"[0-9]+\.[0-9]+\.[0-9]+",/"version": "${tag}",/g' package.json
+    npm run build
+    npm run test
+    npm run lint
+    npm publish
+architect:
+  - "g4s8"
