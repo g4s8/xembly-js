@@ -8,7 +8,7 @@ merge:
     - export PATH=/usr/local/bin:$PATH
     - npm config set color false
     - npm install
-    - npm run build
+    - npm run bundle
     - npm run test
     - npm run lint
     - pdd --source=$(pwd) --verbose --file=/dev/null
@@ -20,7 +20,7 @@ release:
     export PATH=/usr/local/bin:$PATH
     npm config set color false
     npm install
-    npm run build
+    npm run bundle
     npm run test
     npm run lint
     npm publish
