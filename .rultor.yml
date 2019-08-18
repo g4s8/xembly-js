@@ -5,10 +5,13 @@ decrypt:
   .npmrc: "repo/.assets/.npmrc.asc"
 merge:
   script:
-    - "npm run build"
-    - "npm run test"
-    - "npm run lint"
-    - "pdd --source=$(pwd) --verbose --file=/dev/null"
+    - export PATH=/usr/local/bin:$PATH
+    - npm config set color false
+    - npm install
+    - npm run build
+    - npm run test
+    - npm run lint
+    - pdd --source=$(pwd) --verbose --file=/dev/null
   fast-forward: "no"
 release:
   script: |-

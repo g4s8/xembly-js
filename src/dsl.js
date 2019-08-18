@@ -1,6 +1,6 @@
 import {AddDir, SetDir} from './directives.js';
 
-export class Directives {
+export default class Directives {
   constructor(dirs) {
     if (arguments.length == 0) {
       dirs = new Array(0);

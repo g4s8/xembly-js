@@ -3,11 +3,13 @@ const path = require('path');
 var PROD = JSON.parse(process.env.PROD_ENV || '0');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './index.js',
   devtool: 'source-map',
-  mode: "development",
+  mode: PROD ? "production" : "development",
   output: {
-    filename: PROD ? 'bundle.min.js' : 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: PROD ? 'xembly.min.js' : 'xembly.js',
+    libraryTarget: 'var',
+    library: 'xembly',
+    path: path.resolve(__dirname, 'lib')
   }
 };

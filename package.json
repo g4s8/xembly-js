@@ -1,16 +1,17 @@
 {
   "name": "xembly",
-  "version": "0.1.1",
-  "description": "Xembler enginer for JavaScript",
+  "version": "0.1.6",
+  "description": "Xembler engine for JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --progress --colors --config webpack-test.config.js",
-    "build": "webpack",
+    "test": "webpack --config webpack-test.config.js",
+    "bundle": "webpack",
     "lint": "eslint src"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5"
   },
+  "main": "index.js",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-transform-object-assign": "^7.2.0",
@@ -30,10 +31,15 @@
     "webpack-shell-plugin": "^0.5.0"
   },
   "keywords": [
-    "xembler"
+    "xembler",
+    "xembly",
+    "xml",
+    "dom"
   ],
-  "repository": {},
+  "repository": "https://github.com/g4s8/xembly-js",
   "author": "g4s8",
-  "maintainers": [],
-  "license": "MIT"
+  "maintainers": [
+    "https://github.com/g4s8"
+  ],
+  "license": "Xembly"
 }

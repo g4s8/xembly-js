@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="xembly.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+  <script>
+    new xembly.Xembler(
+      new xembly.Directives()
+        .add('span')
+        .set('Hello')
+    ).apply(document, document.getElementById('content'));
+  </script>
+  </body>
+</html>
