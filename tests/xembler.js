@@ -1,5 +1,4 @@
-import {Directives} from '../src/dsl.js';
-import {default as Xembler} from '../src/xembler.js';
+import {Directives, Xembler} from '../index.js';
 import test from 'ava';
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
