@@ -13,10 +13,29 @@ before using this library.
 
 # Installation
 
-Add `npm` module:
+As `npm` module:
 ```bash
 npm install --save xembly
 ```
+
+import it from your module:
+```js
+import {Xembler, Directives} from 'xembler';
+
+new Xembler(new Directives().add('span').set('hello'))
+  .apply(document, document.getElementById('content'));
+```
+
+Also you can build bundle file to use it in browser:
+ 1. clone this repo: `git clone --depth=1 https://github.com/g4s8/xembly-js.git`
+ 2. go to cloned repo: `cd xembly-js`
+ 3. install dependencies: `npm install`
+ 4. build bundle: `npm run bundle` (or `env PROD_ENV npm run bundle` to
+ build optimized for size bundle).
+ 5. copy `./lib/xembly.js` bundle to your assets
+ 6. reference it by `xembly` variable, e.g. `new xembly.Xembler()`
+
+You can check `./examples` directory for working example.
 
 # Usage
 
@@ -53,4 +72,3 @@ new Xembler(
  - [`webpack`](https://webpack.js.org/) is used for packaging
  (see `webpack.config.js` for main config and `webpack-test.config.js` for test config)
  - [`eslint`](https://eslint.org/) is enforced by CI tools (see `.eslintrc.yml` for config)
- - [`mochajs`](https://mochajs.org/) is used for unit testing
