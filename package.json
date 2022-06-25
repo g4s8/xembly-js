@@ -24,7 +24,7 @@
     "babel-plugin-dev-expression": "^0.2.2",
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
     "webpack-node-externals": "^1.7.2",
